@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArcheAgeHelper
+namespace ArcheAgeHelper.Professions
 {
-    public static class WorkingPoints
+    internal static class WorkingPoints
     {
         public static string DailyWorkingPointsCalculate(bool prem, bool premSiol)
         {
             int workingPoints = 1440;
             string wp = "";
 
-            if(prem) 
+            if (prem)
             {
                 workingPoints = 2880;
             }
-            else if (premSiol) 
+            else if (premSiol)
             {
                 workingPoints = 5380;
             }
