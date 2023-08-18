@@ -37,10 +37,13 @@
             ButtonPremium2 = new RadioButton();
             tabPage2 = new TabPage();
             DailyWP = new Label();
+            BlacksmithPage = new TabPage();
+            BlacksmithChoose = new ComboBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel1.SuspendLayout();
             tabPage2.SuspendLayout();
+            BlacksmithPage.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -58,6 +61,7 @@
             tabControl1.Alignment = TabAlignment.Left;
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(BlacksmithPage);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tabControl1.Location = new Point(0, 0);
@@ -153,6 +157,27 @@
             DailyWP.TabIndex = 0;
             DailyWP.Text = "В день получается 1440 очков работы";
             // 
+            // BlacksmithPage
+            // 
+            BlacksmithPage.Controls.Add(BlacksmithChoose);
+            BlacksmithPage.Location = new Point(32, 4);
+            BlacksmithPage.Name = "BlacksmithPage";
+            BlacksmithPage.Padding = new Padding(3);
+            BlacksmithPage.Size = new Size(1148, 753);
+            BlacksmithPage.TabIndex = 2;
+            BlacksmithPage.Text = "Кузнечка";
+            BlacksmithPage.UseVisualStyleBackColor = true;
+            // 
+            // BlacksmithChoose
+            // 
+            BlacksmithChoose.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            BlacksmithChoose.FormattingEnabled = true;
+            BlacksmithChoose.Items.AddRange(new object[] { "Слиток железа", "Слиток меди", "Слиток метеоритного железа", "Слиток серебра", "Слиток золота", "Слиток акхиума", "Слиток анадия", "Слиток пламенного металла" });
+            BlacksmithChoose.Location = new Point(6, 8);
+            BlacksmithChoose.Name = "BlacksmithChoose";
+            BlacksmithChoose.Size = new Size(209, 29);
+            BlacksmithChoose.TabIndex = 0;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -168,6 +193,7 @@
             panel1.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            BlacksmithPage.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -183,5 +209,7 @@
         private RadioButton ButtonPremium1;
         private RadioButton ButtonPremium3;
         private RadioButton ButtonPremium2;
+        private TabPage BlacksmithPage;
+        private ComboBox BlacksmithChoose;
     }
 }
