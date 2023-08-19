@@ -13,5 +13,10 @@ namespace ArcheAgeHelper
         {
             DailyWP.Text = "В день получается " + WorkingPoints.DailyWorkingPointsCalculate(ButtonPremium2.Checked, ButtonPremium3.Checked) + " очков работы";
         }
+
+        private void BlacksmithChoose_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

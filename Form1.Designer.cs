@@ -39,6 +39,13 @@
             DailyWP = new Label();
             BlacksmithPage = new TabPage();
             BlacksmithChoose = new ComboBox();
+            PotionFiveHours = new Label();
+            FirstHourPotion = new Label();
+            SecondHourPotion = new Label();
+            ThirdHourPotion = new Label();
+            FourthHourPotion = new Label();
+            FifthHourPotion = new Label();
+            TotalPotionWP = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             panel1.SuspendLayout();
@@ -138,6 +145,13 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(TotalPotionWP);
+            tabPage2.Controls.Add(FifthHourPotion);
+            tabPage2.Controls.Add(FourthHourPotion);
+            tabPage2.Controls.Add(ThirdHourPotion);
+            tabPage2.Controls.Add(SecondHourPotion);
+            tabPage2.Controls.Add(FirstHourPotion);
+            tabPage2.Controls.Add(PotionFiveHours);
             tabPage2.Controls.Add(DailyWP);
             tabPage2.Location = new Point(32, 4);
             tabPage2.Name = "tabPage2";
@@ -177,6 +191,84 @@
             BlacksmithChoose.Name = "BlacksmithChoose";
             BlacksmithChoose.Size = new Size(209, 29);
             BlacksmithChoose.TabIndex = 0;
+            BlacksmithChoose.SelectedIndexChanged += BlacksmithChoose_SelectedIndexChanged;
+            // 
+            // PotionFiveHours
+            // 
+            PotionFiveHours.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            PotionFiveHours.AutoSize = true;
+            PotionFiveHours.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            PotionFiveHours.Location = new Point(6, 52);
+            PotionFiveHours.Name = "PotionFiveHours";
+            PotionFiveHours.Size = new Size(398, 25);
+            PotionFiveHours.TabIndex = 1;
+            PotionFiveHours.Text = "Настойка трудолюбивого ремесленника:";
+            // 
+            // FirstHourPotion
+            // 
+            FirstHourPotion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            FirstHourPotion.AutoSize = true;
+            FirstHourPotion.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            FirstHourPotion.Location = new Point(6, 92);
+            FirstHourPotion.Name = "FirstHourPotion";
+            FirstHourPotion.Size = new Size(291, 25);
+            FirstHourPotion.TabIndex = 2;
+            FirstHourPotion.Text = "Первый час: 36 очков работы";
+            // 
+            // SecondHourPotion
+            // 
+            SecondHourPotion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            SecondHourPotion.AutoSize = true;
+            SecondHourPotion.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            SecondHourPotion.Location = new Point(6, 117);
+            SecondHourPotion.Name = "SecondHourPotion";
+            SecondHourPotion.Size = new Size(272, 25);
+            SecondHourPotion.TabIndex = 3;
+            SecondHourPotion.Text = "Второй час: 72 очка работы";
+            // 
+            // ThirdHourPotion
+            // 
+            ThirdHourPotion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ThirdHourPotion.AutoSize = true;
+            ThirdHourPotion.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            ThirdHourPotion.Location = new Point(6, 142);
+            ThirdHourPotion.Name = "ThirdHourPotion";
+            ThirdHourPotion.Size = new Size(292, 25);
+            ThirdHourPotion.TabIndex = 4;
+            ThirdHourPotion.Text = "Третий час: 108 очков работы";
+            // 
+            // FourthHourPotion
+            // 
+            FourthHourPotion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            FourthHourPotion.AutoSize = true;
+            FourthHourPotion.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            FourthHourPotion.Location = new Point(7, 167);
+            FourthHourPotion.Name = "FourthHourPotion";
+            FourthHourPotion.Size = new Size(329, 25);
+            FourthHourPotion.TabIndex = 5;
+            FourthHourPotion.Text = "Четвёртый час: 144 очков работы";
+            // 
+            // FifthHourPotion
+            // 
+            FifthHourPotion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            FifthHourPotion.AutoSize = true;
+            FifthHourPotion.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            FifthHourPotion.Location = new Point(7, 192);
+            FifthHourPotion.Name = "FifthHourPotion";
+            FifthHourPotion.Size = new Size(289, 25);
+            FifthHourPotion.TabIndex = 6;
+            FifthHourPotion.Text = "Пятый час: 180 очков работы";
+            // 
+            // TotalPotionWP
+            // 
+            TotalPotionWP.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            TotalPotionWP.AutoSize = true;
+            TotalPotionWP.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            TotalPotionWP.Location = new Point(7, 217);
+            TotalPotionWP.Name = "TotalPotionWP";
+            TotalPotionWP.Size = new Size(341, 25);
+            TotalPotionWP.TabIndex = 7;
+            TotalPotionWP.Text = "Всего за 5 часов: 540 очков работы";
             // 
             // Form1
             // 
@@ -203,7 +295,7 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private Label label3;
+        private Label SecondHourPotion;
         private Label DailyWP;
         private Panel panel1;
         private RadioButton ButtonPremium1;
@@ -211,5 +303,11 @@
         private RadioButton ButtonPremium2;
         private TabPage BlacksmithPage;
         private ComboBox BlacksmithChoose;
+        private Label PotionFiveHours;
+        private Label FirstHourPotion;
+        private Label TotalPotionWP;
+        private Label FifthHourPotion;
+        private Label FourthHourPotion;
+        private Label ThirdHourPotion;
     }
 }
