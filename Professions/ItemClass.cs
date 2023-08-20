@@ -10,5 +10,8 @@ namespace ArcheAgeHelper.Professions
     {
         string name;
         int standartWP;
+        float auctionCost;
+        float createCost;
+        float profit;
     }
 }
