@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArcheAgeHelper.Professions
+namespace ArcheAgeHelper
 {
-    internal class BlacksmithItem : ItemClass
+    internal class TailorItem
     {
-
     }
 }
